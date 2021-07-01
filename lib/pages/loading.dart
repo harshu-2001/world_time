@@ -31,17 +31,19 @@ class _LoadingState extends State<Loading> {
   }
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue.shade600,
-      body: Center(
-        child:LoadingBouncingGrid.square(
+    return Scrollbar(
+          child: Scaffold(
+        backgroundColor: Colors.blue.shade600,
+        body: Center(
+          child:LoadingBouncingGrid.square(
 
-                backgroundColor: Colors.white,
-                size: 80.0,
-                duration: Duration(milliseconds: 501),
-          ),
-      ) 
-          
+                  backgroundColor: Colors.white,
+                  size: 80.0,
+                  duration: Duration(milliseconds: 501),
+            ),
+        ) 
+            
+      ),
     );
   }
 }
