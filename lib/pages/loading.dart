@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:worldtime1/classe/world_class_time.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:loading_animations/loading_animations.dart';
 
 class Loading extends StatefulWidget {
   const Loading({ Key? key }) : super(key: key);
@@ -34,10 +34,11 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
       backgroundColor: Colors.blue.shade600,
       body: Center(
-        child:SpinKitFoldingCube(
+        child:LoadingBouncingGrid.square(
 
-                color: Colors.white,
-                size: 50.0,
+                backgroundColor: Colors.white,
+                size: 80.0,
+                duration: Duration(milliseconds: 501),
           ),
       ) 
           
